@@ -1,0 +1,37 @@
+:root {
+    /* direction */
+    --transform-direction: 1;
+    --start-direction: left;
+    --end-direction: right;
+  
+    /* colors */
+    --color-secondary: rgb(224, 147, 76);
+    --color-bg: #F8F8F8;;
+    --color-primary: #5E9E99;
+    --color-primary-disabled: #A1BFBD;
+    --color-text: #333;
+    --color-secondary-disabled: #F4E9DE;
+    --color-error:#D93025;
+  
+    /* font */
+    --font-size: 16px;
+    --font-family: 'notoSansHebrew', Arial;
+    --font-family-levin: 'gveretLevin', Arial;
+    --font-family-kalam: 'kalam', Arial;
+  
+    /* layout */
+    --max-width: 1440px;
+    --max-width-small: 800px;
+    --border-radius: 0.5rem;
+  
+    /* spacing */
+    --padding-small: 0.5rem;
+    --padding-normal: 1rem;
+    --padding-large: 2rem;
+  }
+  
+  :root[dir="rtl"] {
+    --transform-direction: -1;
+    --start-direction: right;
+    --end-direction: left;
+  }

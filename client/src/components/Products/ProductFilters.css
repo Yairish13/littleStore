@@ -1,0 +1,32 @@
+.product-filters-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.product-filters-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.product-filters-input:last-child {
+  margin-right: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product-filters-container {
+    flex-direction: column;
+  }
+
+  .product-filters-input {
+    margin-right: 0;
+    width: 100%;
+  }
+}

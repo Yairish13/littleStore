@@ -1,0 +1,68 @@
+.user-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.loading-message {
+  text-align: center;
+  color: #666;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-name-container {
+  width: 75%;
+}
+
+.user-edit-container {
+  width: 25%;
+  text-align: right;
+}
+
+.user-link {
+  display: block;
+  padding: 10px 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.user-edit-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.user-edit-link:hover {
+  background-color: #0056b3;
+}
+
+.user-link:hover {
+  background-color: #f0f0f0;
+}
