@@ -9,20 +9,24 @@ import { OrderProduct } from "./entity/OrderProducts.entity";
 
 dotenv.config();
 
-const { DB_HOST, DB_PORT, DB_USERNAME, DB_PASSWORD, DB_DATABASE, NODE_ENV } =
-  process.env;
+const {
+  POSTGRES_HOST = 'postgres',
+  POSTGRES_PORT = 5432,
+  POSTGRES_USER = 'postgres',
+  POSTGRES_PASSWORD,
+  POSTGRES_DB = 'store'
+} = process.env;
 
 export const AppDataSource = new DataSource({
   type: "postgres",
-  host: DB_HOST,
-  port: parseInt(DB_PORT || "5433"),
-  username: DB_USERNAME,
-  password: DB_PASSWORD,
-  database: DB_DATABASE,
+  host: POSTGRES_HOST,
+  port: 5432,
+  username: POSTGRES_USER,
+  password: POSTGRES_PASSWORD,
+  database: 'store',
   synchronize: true,
-  logging: NODE_ENV === "dev" ? false : false,
+  logging: process.env.NODE_ENV === "dev" ? false : false,
   entities: [User, Product, Order, OrderProduct],
   migrations: [__dirname + "/migration/*.ts"],
   subscribers: [],
-  
 });

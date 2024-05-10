@@ -13,6 +13,7 @@ const getProducts = async (): Promise<ProductResponse | undefined> => {
     const response = await axiosInstance.get<ProductResponse>(`${API_URL}/products`);
     return response.data;
   } catch (error) {
+    console.log(error, 'errror')
     console.error('Error fetching products:', error);
   }
 };

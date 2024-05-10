@@ -10,13 +10,14 @@ const start = async () => {
     await AppDataSource.initialize();
     console.log("Data Source has been initialized!");
 
-    await BulkController.fetchAndCreateBulkData({} as any, {} as any, () => {});
+    await BulkController.fetchAndCreateBulkData({} as any, {} as any, () => { });
 
     app.listen(PORT, () => {
       console.log("Server is running on http://localhost:" + PORT);
     });
   } catch (err) {
-    throw new Error(`Something bad occurred - ${err.message}`);
+    console.log(err, 'err')
+    // throw new Error(`Something bad occurred - ${err.message}`);
   }
 };
 

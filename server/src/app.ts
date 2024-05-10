@@ -9,7 +9,7 @@ import { routes } from "./routes/v1";
 
 const app = express();
 const corsOption = {
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173','http://localhost:3050',''],
     credentials: true,
 };
 app.use(cors(corsOption));
