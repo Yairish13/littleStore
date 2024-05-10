@@ -11,7 +11,6 @@ dotenv.config();
 
 const {
   POSTGRES_HOST = 'postgres',
-  POSTGRES_PORT = 5432,
   POSTGRES_USER = 'postgres',
   POSTGRES_PASSWORD,
   POSTGRES_DB = 'store'
@@ -23,7 +22,7 @@ export const AppDataSource = new DataSource({
   port: 5432,
   username: POSTGRES_USER,
   password: POSTGRES_PASSWORD,
-  database: 'store',
+  database: POSTGRES_DB,
   synchronize: true,
   logging: process.env.NODE_ENV === "dev" ? false : false,
   entities: [User, Product, Order, OrderProduct],
